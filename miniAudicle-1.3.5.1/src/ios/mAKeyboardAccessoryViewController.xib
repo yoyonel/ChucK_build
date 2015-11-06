@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="mAKeyboardAccessoryViewController">
+            <connections>
+                <outlet property="_braceButton" destination="MGM-Yw-8i1" id="KgT-lT-geC"/>
+                <outlet property="_bracketButton" destination="s3l-G5-Zpu" id="GNi-WO-eO6"/>
+                <outlet property="_chuckButton" destination="Uk7-q2-blw" id="ig6-VH-PgC"/>
+                <outlet property="_dacButton" destination="Ahq-Yd-YHY" id="TT7-KF-Xwh"/>
+                <outlet property="_doublequoteButton" destination="6F7-eK-5Kk" id="dEG-Pb-2DM"/>
+                <outlet property="_parenButton" destination="GjB-VP-Pbc" id="OPI-FQ-hwJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-q2-blw" customClass="mAKeyboardButton">
+                    <rect key="frame" x="668" y="8" width="80" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="1P5-KL-PhU"/>
+                        <constraint firstAttribute="width" constant="80" id="Ch8-sB-n6s"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                    <state key="normal" title="=>">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="cqI-YS-qiW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xba-5i-Tr7" customClass="mAKeyboardButton">
+                    <rect key="frame" x="20" y="8" width="64" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="JX9-zL-PCg"/>
+                        <constraint firstAttribute="height" constant="28" id="xAy-c0-D2M"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title=":">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="EaF-Yk-4dr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJx-7D-Kt2" customClass="mAKeyboardButton">
+                    <rect key="frame" x="20" y="44" width="64" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="Apr-3P-h5d"/>
+                        <constraint firstAttribute="width" constant="64" id="TvT-ba-8DD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title=";">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="Dqd-EX-oB4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7S9-vn-ATO" customClass="mAKeyboardButton">
+                    <rect key="frame" x="92" y="8" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="56D-mx-EpK"/>
+                        <constraint firstAttribute="height" constant="64" id="Pvl-GR-XKT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
+                    <state key="normal" title="now">
+                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="GD7-5s-ulW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-Yd-YHY" customClass="mAKeyboardButton">
+                    <rect key="frame" x="164" y="8" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="I10-vP-rSw"/>
+                        <constraint firstAttribute="width" constant="64" id="PCK-EO-teB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
+                    <state key="normal" title="dac">
+                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="dhF-lF-5i1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oy2-gI-cTL" customClass="mAKeyboardButton">
+                    <rect key="frame" x="596" y="8" width="64" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="5bd-U4-7Lu"/>
+                        <constraint firstAttribute="height" constant="28" id="F3f-Wy-UH3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="ldw-5d-QNB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kc5-YP-V1e" customClass="mAKeyboardButton">
+                    <rect key="frame" x="596" y="44" width="64" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="bKX-jf-FTT"/>
+                        <constraint firstAttribute="width" constant="64" id="gh6-Cg-qb1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <state key="normal" title="-">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="6HP-1W-7c8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGM-Yw-8i1" customClass="mAKeyboardButton">
+                    <rect key="frame" x="308" y="8" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="Yly-h6-7EV"/>
+                        <constraint firstAttribute="width" constant="64" id="zqd-Wm-kYG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="{ }">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="Jr1-wJ-h4l"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6F7-eK-5Kk" customClass="mAKeyboardButton">
+                    <rect key="frame" x="236" y="44" width="64" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="nba-E2-bkU"/>
+                        <constraint firstAttribute="width" constant="64" id="sNt-3o-ZHm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title="&quot;">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="90M-PK-cNN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBr-Qs-6yD" customClass="mAKeyboardButton">
+                    <rect key="frame" x="236" y="8" width="64" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="HiW-8C-41n"/>
+                        <constraint firstAttribute="height" constant="28" id="icp-1g-D6M"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title="=">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="LtP-vf-gzE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjB-VP-Pbc" customClass="mAKeyboardButton">
+                    <rect key="frame" x="452" y="8" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="Xo4-lM-J0t"/>
+                        <constraint firstAttribute="width" constant="64" id="eXh-Vf-kRG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="( )">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="Kcy-2T-5PC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmY-4k-x6i" customClass="mAKeyboardButton">
+                    <rect key="frame" x="524" y="10" width="64" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="q5B-d3-AkP"/>
+                        <constraint firstAttribute="height" constant="28" id="sUr-vi-L8m"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title="*">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="HQq-6N-vlu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0F-cy-a3Z" customClass="mAKeyboardButton">
+                    <rect key="frame" x="524" y="44" width="64" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="K7m-UP-OP3"/>
+                        <constraint firstAttribute="width" constant="64" id="icM-q7-J4q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title="/">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="YQC-Xb-gEJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3l-G5-Zpu" customClass="mAKeyboardButton">
+                    <rect key="frame" x="380" y="8" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="KdC-g9-bBe"/>
+                        <constraint firstAttribute="width" constant="64" id="pV8-9v-2xL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="[ ]">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="keyPressed:" destination="-1" eventType="touchUpInside" id="8LF-Xy-e4N"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.77089986313868608" green="0.7803921568627451" blue="0.79607843137254897" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstItem="s3l-G5-Zpu" firstAttribute="leading" secondItem="MGM-Yw-8i1" secondAttribute="trailing" constant="8" symbolic="YES" id="6AY-wq-3pa"/>
+                <constraint firstItem="MGM-Yw-8i1" firstAttribute="baseline" secondItem="s3l-G5-Zpu" secondAttribute="baseline" id="6Cz-1y-RAf"/>
+                <constraint firstItem="Oy2-gI-cTL" firstAttribute="top" secondItem="Uk7-q2-blw" secondAttribute="top" id="6n9-sS-FhU"/>
+                <constraint firstItem="Ahq-Yd-YHY" firstAttribute="top" secondItem="xba-5i-Tr7" secondAttribute="top" id="8n0-Ir-iQ8"/>
+                <constraint firstItem="QBr-Qs-6yD" firstAttribute="top" secondItem="GjB-VP-Pbc" secondAttribute="top" id="Bf1-jC-Ozx"/>
+                <constraint firstItem="MGM-Yw-8i1" firstAttribute="bottom" secondItem="M0F-cy-a3Z" secondAttribute="bottom" id="C7L-dh-HqF"/>
+                <constraint firstItem="xba-5i-Tr7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="FkS-sj-8LU"/>
+                <constraint firstItem="MGM-Yw-8i1" firstAttribute="baseline" secondItem="GjB-VP-Pbc" secondAttribute="baseline" id="Kds-DZ-919"/>
+                <constraint firstItem="MGM-Yw-8i1" firstAttribute="leading" secondItem="QBr-Qs-6yD" secondAttribute="trailing" constant="8" symbolic="YES" id="NpK-fM-ino"/>
+                <constraint firstItem="xba-5i-Tr7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="Phf-vS-c8i"/>
+                <constraint firstItem="Oy2-gI-cTL" firstAttribute="leading" secondItem="kc5-YP-V1e" secondAttribute="leading" id="R0r-Wf-Xl4"/>
+                <constraint firstItem="QBr-Qs-6yD" firstAttribute="baseline" secondItem="6F7-eK-5Kk" secondAttribute="baseline" constant="-36" id="S08-Uc-s3a"/>
+                <constraint firstItem="GjB-VP-Pbc" firstAttribute="leading" secondItem="s3l-G5-Zpu" secondAttribute="trailing" constant="8" symbolic="YES" id="TRu-0c-Wjs"/>
+                <constraint firstItem="MGM-Yw-8i1" firstAttribute="bottom" secondItem="TJx-7D-Kt2" secondAttribute="bottom" id="VjJ-tV-Y15"/>
+                <constraint firstItem="Ahq-Yd-YHY" firstAttribute="baseline" secondItem="7S9-vn-ATO" secondAttribute="baseline" id="bQ6-7A-zAW"/>
+                <constraint firstItem="kc5-YP-V1e" firstAttribute="top" secondItem="Oy2-gI-cTL" secondAttribute="bottom" constant="8" symbolic="YES" id="cFI-eJ-gMa"/>
+                <constraint firstItem="Ahq-Yd-YHY" firstAttribute="baseline" secondItem="xba-5i-Tr7" secondAttribute="baseline" constant="19" id="cjo-2a-wfL"/>
+                <constraint firstItem="6F7-eK-5Kk" firstAttribute="leading" secondItem="QBr-Qs-6yD" secondAttribute="trailing" constant="-64" id="clL-Ud-hQ6"/>
+                <constraint firstItem="UmY-4k-x6i" firstAttribute="leading" secondItem="M0F-cy-a3Z" secondAttribute="leading" id="eVp-2Q-AgY"/>
+                <constraint firstItem="Oy2-gI-cTL" firstAttribute="leading" secondItem="UmY-4k-x6i" secondAttribute="trailing" constant="8" symbolic="YES" id="eac-NR-ZZy"/>
+                <constraint firstItem="Ahq-Yd-YHY" firstAttribute="top" secondItem="7S9-vn-ATO" secondAttribute="top" id="efK-Mg-zd8"/>
+                <constraint firstItem="7S9-vn-ATO" firstAttribute="leading" secondItem="TJx-7D-Kt2" secondAttribute="trailing" constant="8" symbolic="YES" id="h9D-LF-Lls"/>
+                <constraint firstItem="MGM-Yw-8i1" firstAttribute="top" secondItem="Oy2-gI-cTL" secondAttribute="top" id="hOD-ZS-mxs"/>
+                <constraint firstItem="QBr-Qs-6yD" firstAttribute="leading" secondItem="Ahq-Yd-YHY" secondAttribute="trailing" constant="8" symbolic="YES" id="oey-SV-iRz"/>
+                <constraint firstItem="UmY-4k-x6i" firstAttribute="baseline" secondItem="s3l-G5-Zpu" secondAttribute="baseline" constant="-18" id="orx-Lb-kUi"/>
+                <constraint firstItem="Uk7-q2-blw" firstAttribute="leading" secondItem="Oy2-gI-cTL" secondAttribute="trailing" constant="8" symbolic="YES" id="peS-36-hCP"/>
+                <constraint firstItem="Ahq-Yd-YHY" firstAttribute="leading" secondItem="7S9-vn-ATO" secondAttribute="trailing" constant="8" id="sAr-UW-NJi"/>
+                <constraint firstItem="UmY-4k-x6i" firstAttribute="leading" secondItem="GjB-VP-Pbc" secondAttribute="trailing" constant="8" symbolic="YES" id="stk-vk-gK6"/>
+                <constraint firstItem="xba-5i-Tr7" firstAttribute="top" secondItem="s3l-G5-Zpu" secondAttribute="top" id="upq-mt-6uU"/>
+                <constraint firstItem="MGM-Yw-8i1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="308" id="xun-Rt-pCq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

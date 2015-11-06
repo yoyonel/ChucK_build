@@ -1,0 +1,17 @@
+
+MSBUILD=msbuild.exe
+
+ifneq (,$(CHUCK_DEBUG))
+CONFIG=Debug
+CHUCK_BIN=Debug/chuck.exe
+else
+CONFIG=Release
+CHUCK_BIN=Release/chuck.exe
+endif
+
+$(CHUCK_BIN): 
+	$(MSBUILD) /p:Configuration=$(CONFIG) 
+
+clean:
+	$(MSBUILD) /p:Configuration=$(CONFIG) /t:Clean
+

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="mAScriptPlayer">
+            <connections>
+                <outlet property="_addButton" destination="CnH-tO-mYD" id="pLd-mU-i8u"/>
+                <outlet property="_deleteButton" destination="D7v-iK-QGw" id="Oo0-Ai-zTb"/>
+                <outlet property="_loopButton" destination="yA1-5D-TJ9" id="0UE-ua-6ed"/>
+                <outlet property="_loopNButton" destination="EHP-Hc-5ab" id="e8B-Wh-DIz"/>
+                <outlet property="_playerTabView" destination="yig-hN-R0p" id="o2Q-UP-9DD"/>
+                <outlet property="_removeButton" destination="SQh-4x-Fn7" id="Wcb-CU-EhO"/>
+                <outlet property="_replaceButton" destination="xdm-Ek-wa2" id="ITw-20-yuO"/>
+                <outlet property="_sequenceButton" destination="iwo-RC-2JP" id="SmT-mC-3vz"/>
+                <outlet property="_showDeleteButtonGestureRecognizer" destination="OHf-PT-qHZ" id="T9u-me-6Fk"/>
+                <outlet property="_titleLabel" destination="WxK-NC-9EQ" id="qco-00-jue"/>
+                <outlet property="_usernameLabel" destination="fbv-ZQ-dDC" id="MUu-Os-GLb"/>
+                <outlet property="titleLabel" destination="WxK-NC-9EQ" id="Z80-14-9sh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="mAScriptPlayerView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="104"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="yig-hN-R0p" customClass="mAScriptPlayerTab">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="OHf-PT-qHZ" appends="YES" id="N9M-mC-r9D"/>
+                    </connections>
+                </view>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="script" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WxK-NC-9EQ">
+                    <rect key="frame" x="20" y="11" width="183" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fbv-ZQ-dDC">
+                    <rect key="frame" x="20" y="40" width="183" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Y17-qi-ffA">
+                    <rect key="frame" x="203" y="9" width="25" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="forward-100.png"/>
+                    <connections>
+                        <action selector="edit:" destination="-1" eventType="touchUpInside" id="3Vm-Rc-xuD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CnH-tO-mYD" customClass="mAOTFButton">
+                    <rect key="frame" x="20" y="40" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.89000368118286133" green="0.89012889067331957" blue="0.88995202382405603" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <inset key="contentEdgeInsets" minX="1" minY="2" maxX="1" maxY="-2"/>
+                    <state key="normal" title="Button" image="add-noalpha.png">
+                        <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="addShred:" destination="-1" eventType="touchUpInside" id="VY1-p9-We9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xdm-Ek-wa2" customClass="mAOTFButton">
+                    <rect key="frame" x="92" y="40" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.89000368118286133" green="0.89012889067331957" blue="0.88995202382405603" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <inset key="contentEdgeInsets" minX="1" minY="2" maxX="1" maxY="-2"/>
+                    <state key="normal" title="Button" image="replace-noalpha.png">
+                        <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="replaceShred:" destination="-1" eventType="touchUpInside" id="mGc-3J-5r4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SQh-4x-Fn7" customClass="mAOTFButton">
+                    <rect key="frame" x="164" y="40" width="64" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.89000368118286133" green="0.89012889067331957" blue="0.88995202382405603" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <inset key="contentEdgeInsets" minX="1" minY="2" maxX="1" maxY="-2"/>
+                    <state key="normal" title="Button" image="remove-noalpha.png">
+                        <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="removeShred:" destination="-1" eventType="touchUpInside" id="eDv-4W-BKG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="D7v-iK-QGw">
+                    <rect key="frame" x="-12" y="-12" width="25" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="-1" maxX="-1" maxY="1"/>
+                    <state key="normal" backgroundImage="UIRemoveControlMinus.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="deletePlayer:" destination="-1" eventType="touchUpInside" id="KPn-8C-2vm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yA1-5D-TJ9" customClass="mAOTFButton">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" red="0.89000368119999995" green="0.89012889070000001" blue="0.88995202380000005" alpha="0.0" colorSpace="calibratedRGB"/>
+            <inset key="contentEdgeInsets" minX="1" minY="2" maxX="1" maxY="-2"/>
+            <state key="normal" title="Button" image="loop.png">
+                <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <state key="selected">
+                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <state key="highlighted">
+                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <connections>
+                <action selector="loopShred:" destination="-1" eventType="touchUpInside" id="r1v-db-d4o"/>
+            </connections>
+        </button>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EHP-Hc-5ab" customClass="mAOTFButton">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" red="0.89000368119999995" green="0.89012889070000001" blue="0.88995202380000005" alpha="0.0" colorSpace="calibratedRGB"/>
+            <inset key="contentEdgeInsets" minX="1" minY="2" maxX="1" maxY="-2"/>
+            <state key="normal" title="Button" image="loop.png">
+                <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <state key="selected">
+                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <state key="highlighted">
+                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <connections>
+                <action selector="loopNShred:" destination="-1" eventType="touchUpInside" id="cUh-za-rDK"/>
+            </connections>
+        </button>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iwo-RC-2JP" customClass="mAOTFButton">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" red="0.89000368119999995" green="0.89012889070000001" blue="0.88995202380000005" alpha="0.0" colorSpace="calibratedRGB"/>
+            <inset key="contentEdgeInsets" minX="1" minY="2" maxX="1" maxY="-2"/>
+            <state key="normal" title="Button" image="sequence.png">
+                <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <state key="selected">
+                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <state key="highlighted">
+                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <connections>
+                <action selector="sequenceShred:" destination="-1" eventType="touchUpInside" id="MMN-SZ-uTY"/>
+            </connections>
+        </button>
+        <pongPressGestureRecognizer allowableMovement="5" minimumPressDuration="0.62" id="OHf-PT-qHZ">
+            <connections>
+                <action selector="showDeleteButton:" destination="-1" id="77r-oT-kTP"/>
+            </connections>
+        </pongPressGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="UIRemoveControlMinus.png" width="44" height="48"/>
+        <image name="add-noalpha.png" width="218" height="218"/>
+        <image name="forward-100.png" width="100" height="100"/>
+        <image name="loop.png" width="218" height="218"/>
+        <image name="remove-noalpha.png" width="218" height="218"/>
+        <image name="replace-noalpha.png" width="218" height="218"/>
+        <image name="sequence.png" width="218" height="218"/>
+    </resources>
+</document>

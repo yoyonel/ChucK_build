@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>ck</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>ck.icns</string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>text/plain</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>ChucK Script</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>****</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>miniAudicleDocument</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>miniAudicle</string>
+	<key>CFBundleGetInfoString</key>
+	<string>miniAudicle $(ENV_MA_VERSION) (gidora)</string>
+	<key>CFBundleIconFile</key>
+	<string>miniAudicle</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.miniAudicle.miniAudicle</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(ENV_MA_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(ENV_MA_VERSION)</string>
+	<key>NSMainNibFile</key>
+	<string>miniAudicle</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.utf8-plain-text</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>ChucK Script</string>
+			<key>UTTypeIconFile</key>
+			<string>ck</string>
+			<key>UTTypeIdentifier</key>
+			<string>edu.stanford.chuck</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://chuck.stanford.edu/</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>ck</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
