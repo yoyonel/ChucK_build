@@ -61,7 +61,10 @@ Il faut patch la lib pour avoir un son sur Linux.
 Use a text-editor (preferably one that shows line-numbers) to open the file:  
 geany src/RtAudio/RtAudio.cpp  
 
-- Find line ~5660: ```c++ sprintf( name, "hw:%d,%d", card, subdevice );```
+- Find line ~5660: 
+```c++ 
+sprintf( name, "hw:%d,%d", card, subdevice );
+```
 
 Revise this to read:
 ```c++
@@ -69,7 +72,10 @@ Revise this to read:
 sprintf( name, "pulse" );
 ```
 
-- Find line ~5699: ```c++ int openMode = SND_PCM_ASYNC;```
+- Find line ~5699: 
+```c++ 
+int openMode = SND_PCM_ASYNC;
+```
 
 Revise this to read:
 ```c++
