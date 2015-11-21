@@ -10,6 +10,7 @@ QMAKE?=qmake-qt4
 else
 QMAKE?=qmake
 endif
+QMAKE+= -r -spec linux-g++-64
 
 CHUGINS_SRC_ROOT=chugins
 CHUGINS=ABSaturator Bitcrusher FIR KasFilter PanN

@@ -42,7 +42,7 @@ A priori pas trop de difficultés pour compiler cette lib sous Linux/Mint/Ubuntu
 Le makefile n'est pas super évolué, faudrait voir pour effectuer une version CMake (plus propre/structuré).
 
 ```bash
-.../chuck-1.3.5.2/src$
+[$CHUCK_DIRECTORY]/src$
                       make -j linux-alsa
                       sudo cp chuck /usr/bin/;sudo chmod 755 /usr/bin/chuck
                       make clean
@@ -61,8 +61,8 @@ Il faut patch la lib pour avoir un son sur Linux.
 Use a text-editor (preferably one that shows line-numbers) to open the file:  
 geany src/RtAudio/RtAudio.cpp  
 
-- Find line ~5660: 
-```c++ 
+- Find line ~5660:
+```c++
 sprintf( name, "hw:%d,%d", card, subdevice );
 ```
 
@@ -72,8 +72,8 @@ Revise this to read:
 sprintf( name, "pulse" );
 ```
 
-- Find line ~5699: 
-```c++ 
+- Find line ~5699:
+```c++
 int openMode = SND_PCM_ASYNC;
 ```
 
@@ -89,7 +89,7 @@ La version *alsa* semble poser des pbs:
 
 Du coup, je suis passé à la version *pulse*:
 ```bash
-.../chuck-1.3.5.2/src$
+[$CHUCK_DIRECTORY]/src$
                       make -j linux-pulse
                       sudo cp chuck /usr/bin/;sudo chmod 755 /usr/bin/chuck
                       make clean
@@ -120,9 +120,29 @@ libqt4-dev libqscintilla2-dev [libpulse-dev] [libjack-jackd2-dev]
 ```
 
 ```bash
-miniAudicle-1.3.5.1/src$
+[$MINIAUDICLE_DIRECTORY]/src$
                           make -j linux-pulse
                           sudo cp miniAudicle /usr/bin/;sudo chmod 755 /usr/bin/miniAudicle
                           make clean
 ```
-A noter que l'éditeur miniAudicle contient une version de ChucK qui tourne sans problème (ni patch) => `miniAudicle-1.3.5.1/src/chuck`
+A noter que l'éditeur miniAudicle contient une version de ChucK qui tourne sans problème (ni patch) => `[$MINIAUDICLE_DIRECTORY]/src/chuck`
+
+#### A la maison (Linux Mint x64)
+Probleme avec la version de qt et les QMAKESPEC associés.
+J'ai du patcher le makefile qui utilise qmake ou qmake-qt4 pour générer le makefile cible (alsa, pulse, ...).
+
+Le patch: ~ line 13
+```makefile
+ifneq ($(shell which qmake-qt4),)
+QMAKE?=qmake-qt4
+else
+QMAKE?=qmake
+endif
+QMAKE+= -r -spec linux-g++-64   # <-le rajout est ICI
+```
+J'ai récupéré les options de build du .pro via le build sous qtcreator (qui compilait tout seul comme un grand).
+
+A noter pour l'installation, on peut faire tout simplement un:
+```bash
+[$MINIAUDICLE_DIRECTORY]/src$ sudo make install
+```

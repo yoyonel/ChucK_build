@@ -37,6 +37,7 @@ QMAKE_LIBS += -framework Cocoa -framework CoreAudio -framework CoreMIDI \
 QMAKE_LFLAGS += -m32
 }
 
+INCLUDEPATH += chuck/src
 
 linux-* {
 
